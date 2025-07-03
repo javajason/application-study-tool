@@ -244,9 +244,12 @@ $ docker run --rm -it -w /app -v ${PWD}:/app --entrypoint /app/src/bin/init_entr
 ```
 
 **Run With System Python**
+
+This step assumes Python is already installed on your system. If it is not, you can follow these instructions to install it:
+* [Install on Ubuntu](https://docs.python-guide.org/starting/install3/linux/)
+* [Install on RHEL and compatible Linux distributions](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/installing_and_using_dynamic_programming_languages/assembly_installing-and-using-python_installing-and-using-dynamic-programming-languages)
 ```bash
-$ pip install PyYAML==6.0.2
-$ python /app/src/config_helper.py --generate-config
+$ python3 src/config_helper.py --generate-config
 ```
 
 This will write 2 new files in the services/otel_collector directory:
